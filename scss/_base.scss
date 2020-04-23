@@ -1,0 +1,41 @@
+
+
+$base-font: 16px;
+$font-display: 'Montserrat', sans-serif;
+$font-primary: 'Open Sans', sans-serif;
+
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+html {
+    font-size: $base-font;
+}
+
+
+
+h1 {
+    font-family: $font-display;
+    font-size: 2rem;
+}
+
+p {
+    font-family: $font-primary;
+}
+
+a {
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+ul {
+    list-style: none;
+}
