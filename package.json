@@ -1,24 +1,24 @@
 {
-  "name": "catie.codes_node_app",
+  "name": "BookClub",
   "version": "1.0.0",
-  "description": "Complete node.js course",
-  "main": "server.js",
+  "description": "Bookstore ecommerce app",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-server": "nodemon server.js",
-    "compile-sass": "node-sass scss/main.scss css/main.css --watch",
+    "dev-server": "nodemon app.js",
+    "compile-sass": "node-sass styles/scss/main.scss styles/css/main.css --watch",
     "start": "npm-run-all --parallel dev-server compile-sass"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CatieTort/Node_App.git"
+    "url": "git+https://github.com/CatieTort/BookClub.git"
   },
   "author": "Catie Tortorella",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CatieTort/Node_App/issues"
+    "url": "https://github.com/CatieTort/BookClub/issues"
   },
-  "homepage": "https://github.com/CatieTort/Node_App#readme",
+  "homepage": "https://github.com/CatieTort/BookClub#readme",
   "devDependencies": {
     "nodemon": "^2.0.3"
   },

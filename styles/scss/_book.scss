@@ -1,4 +1,4 @@
-.product {
+.book {
 
     &__items-grid {
         display: flex;
@@ -45,18 +45,25 @@
         margin-right: 20px;
     }
 
-    &__product {
+    &__book {
 
         &-title {
             margin-bottom: 5px;
         }
 
         &-author {
-            
+           font-family: $font-primary; 
+        }
+
+        &-genre {
+            font-family: $font-primary; 
+            color: #ccc;
         }
 
         &-img {
-
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 10px 2px;
         }
 
         &-price {

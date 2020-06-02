@@ -1,32 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= pageTitle %></title>
-    <link rel="stylesheet"
-        href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@300;400&display=swap' />
-    <link rel="stylesheet" href="/main.css" />
-</head>
+<%- include('../shared/head') %>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/">Shop</a></li>
-                <li><a href="/admin/add-product">Add Product</a></li>
-            </ul>
-        </nav>
-    </header>
+    <%- include('../shared/nav') %>
     <main>
         <div>
-            <h2 class="form-control__title">Add a Product</h2>
+            <h2 class="form-control__title">Add a Book</h2>
             <form action="/admin/add-product" class="form-control flex-column flex-column--left" method='POST'>
                 <label class="text" for="title">Title</label>
                 <input type="text" name="title" />
                 <label class="text" for="author">Author</label>
                 <input type="text" name="author" />
+                <label class="text" for="genre">Genre</label>
+                <input type="text" name="genre" />
                 <label class="text" for="desc">Description</label>
                 <textarea name="desc"></textarea>
                 <div style="position:relative; width: 95%">

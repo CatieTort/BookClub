@@ -135,20 +135,18 @@ ul {
     color: #fff;
     font-family: "Montserrat", sans-serif; }
 
-.product__items-grid {
+.book__items-grid {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   margin: 20px; }
 
-.product__grid {
+.book__grid {
   display: grid;
   grid-template-columns: 300px;
   grid-template-rows: 80px 250px 200px 65px;
   border: 1px solid #ccc; }
-  .product__grid:first-child {
-    grid-row-gap: 10px; }
 
 .card__header {
   display: flex;
@@ -173,12 +171,24 @@ ul {
   border-radius: 2px;
   margin-right: 20px; }
 
-.card__product-title {
+.card__book-title {
   margin-bottom: 5px; }
 
-.card__product-price {
+.card__book-author {
+  font-family: "Open Sans", sans-serif; }
+
+.card__book-genre {
+  font-family: "Open Sans", sans-serif;
+  color: #ccc; }
+
+.card__book-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 10px 2px; }
+
+.card__book-price {
   padding-left: 23px;
   text-align: right; }
 
-.card__product-desc {
+.card__book-desc {
   padding: 15px; }
