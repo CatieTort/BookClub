@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet"
+        href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@300;400&display=swap' />
+    <link rel="stylesheet" href="/main.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar__container">
+            <ul class="nav-bar__list">
+                <li class="nav-bar__item"><a href="/">Shop</a></li>
+                <li class="nav-bar__item"><a href="/admin/add-product">Add Product</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="product__items-grid">
+            <% if(prods.length > 0) { %>
+                <% prods.map( item => { %>
+                <div class="product__grid">
+                    <div class="card__header">
+                        <h1 class="card__product-title"><%= item.title %></h1>
+                        <div class="card__product-author"><%= item.author %></div>
+                    </div>
+                    <div class="card__product-img">
+                        <img src=<%= `${item.image}` %> alt="Book cover" />
+                    </div>
+                    <div class="card__content">
+                        <p class="card__product-desc"><%= item.desc %></p>
+                    </div>
+                    <div class="card__actions">
+                        <h2 class="card__product-price">$<%= item.price %></h2>
+                        <button class="card__btn">Add to Cart</button>
+                    </div>
+                </div>
+                <% }) %>
+            <% } else { %>
+                <h1 class="card__product-title">No Products Found</h1>
+           <% } %>
+        </div>
+    </main>
+</body>
+
+</html>

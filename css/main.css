@@ -10,9 +10,15 @@ html {
 
 h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 2rem; }
+  font-size: 2rem;
+  margin-bottom: 20px; }
 
-p {
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem; }
+
+p, .text {
   font-family: "Open Sans", sans-serif; }
 
 a {
@@ -24,7 +30,155 @@ a {
 ul {
   list-style: none; }
 
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.flex-column {
+  display: flex;
+  flex-direction: column; }
+  .flex-column--center {
+    justify-content: center;
+    align-items: center; }
+  .flex-column--left {
+    justify-content: center;
+    align-items: start; }
+
 .container {
   margin: 20px 10px;
   padding: 0;
   box-sizing: border-box; }
+
+.form-control {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 3px;
+  margin: 20px;
+  padding: 20px 15px;
+  padding-left: 25px;
+  width: 330px; }
+  .form-control__title {
+    margin-left: 25px;
+    margin-top: 20px; }
+  .form-control input {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 30px;
+    margin: 10px;
+    margin-left: 0;
+    width: 95%;
+    padding-left: 10px;
+    font-size: 14px; }
+    .form-control input[name="price"] {
+      padding-left: 23px; }
+    .form-control input:focus {
+      outline: none;
+      background-color: #ddd; }
+  .form-control > textarea {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 30px;
+    margin: 10px;
+    margin-left: 0;
+    width: 91%;
+    height: 150px;
+    resize: none;
+    padding: 10px;
+    font-size: 14px; }
+    .form-control > textarea:focus {
+      outline: none;
+      background-color: #ddd; }
+  .form-control__currency {
+    position: absolute;
+    color: #ccc;
+    top: 39px;
+    left: 10px; }
+  .form-control__submit-btn {
+    background-color: orangered;
+    opacity: .8;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 15px;
+    margin: 15px;
+    margin-left: 0px;
+    font-size: 16px; }
+    .form-control__submit-btn:hover {
+      opacity: 1;
+      box-shadow: 0px 1px 4px 2px #ccc; }
+
+.nav-bar__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  background-color: teal;
+  height: 30px;
+  margin-bottom: 40px; }
+
+.nav-bar__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center; }
+
+.nav-bar__item {
+  align-self: center;
+  margin-left: 35px;
+  height: 100%;
+  padding: 5px 0px; }
+  .nav-bar__item:hover {
+    border-bottom: 1px solid #fff; }
+  .nav-bar__item > a {
+    color: #fff;
+    font-family: "Montserrat", sans-serif; }
+
+.product__items-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px; }
+
+.product__grid {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 80px 250px 200px 65px;
+  border: 1px solid #ccc; }
+  .product__grid:first-child {
+    grid-row-gap: 10px; }
+
+.card__header {
+  display: flex;
+  flex-direction: column;
+  padding: 15px; }
+
+.card__content {
+  margin-top: 10px; }
+
+.card__actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+
+.card__btn {
+  border: none;
+  padding: 10px 15px;
+  background: darkblue;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 2px;
+  margin-right: 20px; }
+
+.card__product-title {
+  margin-bottom: 5px; }
+
+.card__product-price {
+  padding-left: 23px;
+  text-align: right; }
+
+.card__product-desc {
+  padding: 15px; }
