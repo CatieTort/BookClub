@@ -20,3 +20,7 @@ exports.showCart = (req, res, next) => {
 exports.goToCheckout = (req, res, next) => {
     res.render('shop/checkout', {pageTitle: "Checkout", path: '/checkout'})
 }
+
+exports.showOrders = (req, res, next) => {
+    res.render('shop/orders', {pageTitle: "Your Orders", path: '/orders'})
+}

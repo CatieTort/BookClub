@@ -3,7 +3,31 @@
 <body>
     <%- include('../shared/nav') %>
     <main>
-        <div>This is the admin book list</div>
+        <div class="book__items-grid">
+            <% if(books.length > 0) { %>
+            <% books.map( item => { %>
+            <div class="book__grid">
+                <div class="card__header">
+                    <h1 class="card__book-title"><%= item.title %></h1>
+                    <div class="card__book-author"><%= item.author %></div>
+                    <div class="card__book-genre"><%= item.genre %></div>
+                </div>
+                <div class="card__book-img" style="background-image: url('/assets/<%= imageURL %>') ">
+                </div>
+                <div class="card__content">
+                    <p class="card__book-desc"><%= item.desc %></p>
+                </div>
+                <div class="card__actions">
+                    <h2 class="card__book-price">$<%= item.price %></h2>
+                    <a class="card__btn card__btn--edit" href="/admin/edit-book">Edit Book</button>
+                    <button class="card__btn card__btn--delete">Delete Book</button>
+                </div>
+            </div>
+            <% }) %>
+            <% } else { %>
+            <h1 class="card__book-title">No Books Found</h1>
+            <% } %>
+        </div>
     </main>
 </body>
 

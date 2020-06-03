@@ -1,11 +1,26 @@
 <header>
     <nav class="nav-bar__container">
-        <ul class="nav-bar__list">
+        <ul class="nav-bar__list">   
             <li class="nav-bar__item"><a class="<%= path === '/' ? 'active' : '' %>" href="/">Club</a></li>
             <li class="nav-bar__item"><a class="<%= path === '/books' ? 'active' : '' %>" href="/books">Books</a></li>
-            <li class="nav-bar__item"><a class="<%= path === '/admin/list-books' ? 'active' : '' %>" href="/admin/list-books">Admin Book List</a></li>
+            <li class="nav-bar__item"><a class="<%= path === '/list-books' ? 'active' : '' %>" href="/admin/list-books">Admin Book List</a></li>
             <li class="nav-bar__item"><a class="<%= path === '/add-book' ? 'active' : '' %>" href="/admin/add-book">Add Book</a></li>
             <li class="nav-bar__item"><a class="<%= path === '/cart' ? 'active' : '' %>" href="/cart"><i class="fas fa-shopping-cart"></i></a></li>
+            <li class="nav-bar__item"><a class="<%= path === '/orders' ? 'active' : '' %>" href="/orders">Orders</a></li>
         </ul>
     </nav>
 </header>
+
+<!-- nav mobile tabs 
+     <li class="nav-bar__item"><a class="<%= path === '/' ? 'active' : '' %>" href="/">Club</a></li>
+                <li class="nav-bar__item"><a class="<%= path === '/books' ? 'active' : '' %>" href="/books"><i class="fas fa-book-open"></i></a></li>
+                <li class="nav-bar__item"><a class="<%= path === '/list-books' ? 'active' : '' %>" href="/admin/list-books"><i class="fas fa-list-ul"></i></a></li>
+                <li class="nav-bar__item"><a class="<%= path === '/add-book' ? 'active' : '' %>" href="/admin/add-book"><i class="fas fa-plus-circle"></i></a>
+                </li>
+                <li class="nav-bar__item"><a class="<%= path === '/cart' ? 'active' : '' %>" href="/cart"><i
+                            class="fas fa-shopping-cart"></i></a></li>
+                <li class="nav-bar__item"><a class="<%= path === '/orders' ? 'active' : '' %>" href="/orders"><i class="fas fa-box-open"></i></a></li>
+
+edit <i class="fas fa-pencil-alt"></i>
+delete <i class="fas fa-times"></i>
+-->

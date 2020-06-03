@@ -1,5 +1,6 @@
 const Book = require('../models/book')
 
+
 exports.getAddBook = (req, res, next) => {
     res.render('admin/add-book', { pageTitle: "Add Book", path: '/add-book' })
 }
@@ -7,7 +8,7 @@ exports.getAddBook = (req, res, next) => {
 exports.postAddBook = (req, res, next) => {
     const book = new Book(req.body)
     product.save()
-    res.redirect('/')
+    res.redirect('admin/list-books', { pageTitle: 'Book List', path: '/list-books'} )
 }
 
 exports.getBooks = (req, res, next) => {
@@ -22,5 +23,5 @@ exports.getBooks = (req, res, next) => {
 }
 
 exports.noRouteFound = (req, res, next) => {
-    res.status(404).render('404', { pageTitle: "Page Not Found" })
+    res.status(404).render('404', { pageTitle: "Page Not Found", path: '/not-found' })
 }

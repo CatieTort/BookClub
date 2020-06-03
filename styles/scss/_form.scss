@@ -1,0 +1,86 @@
+.form-control {
+    box-shadow: $box-shadow;
+    border-radius: 3px;
+    margin: 20px;
+    padding: 20px 15px;
+    padding-left: 25px;
+    width: 530px;
+
+    &__title {
+        margin-left: 25px;
+        margin-top: 20px;
+    }
+
+    input {
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        height: 30px;
+        margin: 10px;
+        margin-left: 0;
+        width: 95%;
+        padding-left: 10px;
+        font-size: 14px;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            display: none;
+            margin: 0;
+        }
+
+        &[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        &[name="price"]{
+            padding-left: 23px;
+        }
+        
+        &:focus {
+            outline: none;
+            background-color: #ddd;
+        }
+    }
+
+    & > textarea {
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        height: 30px;
+        margin: 10px;
+        margin-left: 0;
+        width: 91%;
+        height: 150px;
+        resize: none;
+        padding: 10px;
+        font-size: 14px;
+
+         &:focus {
+            outline: none;
+            background-color: #ddd;
+        }
+    }
+
+    &__currency {
+        position: absolute;
+        color: #ccc;
+        top: 39px;
+        left: 10px;
+    }
+
+    &__submit-btn {
+        background-color: orangered;
+        opacity: .8;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        padding: 10px 15px;
+        margin: 15px;
+        margin-left: 0px;
+        font-size: 16px;
+        cursor: pointer;
+
+        &:hover {
+           opacity: 1;
+           box-shadow: 0px 1px 4px 2px #ccc;
+        }
+    }
+}

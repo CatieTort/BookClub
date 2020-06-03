@@ -1,3 +1,10 @@
+.add-book {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .book {
 
     &__items-grid {
@@ -12,7 +19,7 @@
         display: grid;
         grid-template-columns: 300px;
         grid-template-rows: 80px 250px 200px 65px;
-        border: 1px solid #ccc;
+        box-shadow: $box-shadow;
     }
 }
 
@@ -43,6 +50,14 @@
         font-size: 1rem;
         border-radius: 2px;
         margin-right: 20px;
+
+        &--edit {
+            background-color: orangered;
+        }
+
+        &--delete {
+            background-color: darkred;
+        }
     }
 
     &__book {
