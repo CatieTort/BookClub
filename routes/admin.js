@@ -9,5 +9,6 @@ router.get('/list-books', adminController.getBooks)
 
 router.post('/add-book', adminController.postAddBook)
 
+router.get('/edit-book/:bookId', adminController.getEditBook)
 
 module.exports = router;

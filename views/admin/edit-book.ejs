@@ -1,0 +1,30 @@
+<%- include('../shared/head') %>
+
+<body>
+    <%- include('../shared/nav') %>
+    <main>
+        <div class="add-book">
+            <h2 class="form-control__title">Add a Book</h2>
+            <form action="/admin/add-product" class="form-control flex-column flex-column--left" method='POST'>
+                <label class="text" for="title">Title</label>
+                <input type="text" name="title" id="title" />
+                <label class="text" for="author">Author</label>
+                <input type="text" name="author" id="author" />
+                <label class="text" for="genre">Genre</label>
+                <input type="text" name="genre" id="genre" />
+                <label class="text" for="image">Image Url</label>
+                <input type="text" name="image" id="image" />
+                <label class="text" for="desc">Description</label>
+                <textarea name="desc" id="desc"></textarea>
+                <div style="position:relative; width: 95%">
+                    <label class="text" for="price">Price</label>
+                    <div class="form-control__currency">$</div>
+                    <input type="number" name="price" id="price" step="0.01" />
+                </div>
+                <button class="form-control__submit-btn" type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

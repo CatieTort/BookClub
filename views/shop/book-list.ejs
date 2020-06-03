@@ -15,11 +15,12 @@
                     <div class="card__book-img" style="background-image: url('/assets/<%= imageURL %>') ">
                     </div>
                     <div class="card__content">
+                        <h2 class="card__book-price">$<%= item.price %></h2>
                         <p class="card__book-desc"><%= item.desc %></p>
                     </div>
                     <div class="card__actions">
-                        <h2 class="card__book-price">$<%= item.price %></h2>
-                        <button class="card__btn">Add to Cart</button>
+                        <a href="/book-detail/<%= item.id %>" class="card__btn">Details</a>
+                        <%- include('../shared/add-to-cart', item) %>
                     </div>
                 </div>
                 <% }) %>

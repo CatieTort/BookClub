@@ -19,7 +19,7 @@
                 </div>
                 <div class="card__actions">
                     <h2 class="card__book-price">$<%= item.price %></h2>
-                    <a class="card__btn card__btn--edit" href="/admin/edit-book">Edit Book</button>
+                    <a class="card__btn card__btn--edit" href="/admin/edit-book/<%= item.id %>?edit=true">Edit Book</button>
                     <button class="card__btn card__btn--delete">Delete Book</button>
                 </div>
             </div>

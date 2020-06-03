@@ -10,6 +10,10 @@ router.get('/', shopController.getIndex)
 
 router.get('/books', shopController.getBooks)
 
+router.get('/books/:bookId', shopController.getBookDetails)
+
+router.post('/cart/:bookId', shopController.addToCart)
+
 router.get('/cart', shopController.showCart)
 
 router.get('/checkout', shopController.goToCheckout )

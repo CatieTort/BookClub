@@ -2,7 +2,15 @@
     <body>
         <%- include('../shared/nav') %>
         <main>
-            <div>Welcome to book detail</div>
+            <div>Welcome to book detail for <%= book.id %></div>
+            <div>
+                <h1><%= book.title %></h1>
+                <hr>
+                <div style="background-image: url('<%= book.imageURL %>')"></div>
+                <div><%= book.price %></div>
+                <div><%= book.desc %></div>
+                <%- include('../shared/add-to-cart', item) %>
+            </div>
         </main>
     </body>
 
