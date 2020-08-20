@@ -1,3 +1,5 @@
+const db = require("../utils/database");
+
 module.exports =  class Cart {
     static addBook(id, price){
         //get cart from db
@@ -19,6 +21,14 @@ module.exports =  class Cart {
         }
         cart.totalPrice = cart.totalPrice + +price
         //save to db
+    }
+
+    static deleteBook(id){
+        return db.execute(`DELETE * FROM cart where item_id = ${id};`)
+    }
+
+    static getCart(memberId){
+       return db.execute(`SELECT * FROM cart where member_id = ${memberId};`)
     }
 
 }

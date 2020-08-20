@@ -5,22 +5,24 @@
     <main>
         <div class="book__items-grid">
             <% if(books.length > 0) { %>
-            <% books.map( item => { %>
+            <% books.map((item) => { %>
             <div class="book__grid">
+                <% let lname_update = item.author_lname.replace(' ', '_'); %>
+                <div class="card__book-img"
+                    style="background-image: url('/assets/<%= `${lname_update}_${item.released_year}.jpg` %>') "></div>
                 <div class="card__header">
-                    <h1 class="card__book-title"><%= item.title %></h1>
-                    <div class="card__book-author"><%= item.author %></div>
+                    <h2 class="card__book-title"><%= item.title %></h2>
+                    <div class="card__book-author"><%= item.author_fname %> <%=item.author_lname %></div>
                     <div class="card__book-genre"><%= item.genre %></div>
                 </div>
-                <div class="card__book-img" style="background-image: url('/assets/<%= imageURL %>') ">
-                </div>
                 <div class="card__content">
-                    <p class="card__book-desc"><%= item.desc %></p>
+                    <h2 class="card__book-price">$<%= item.price %></h2>
+                    <% let short_desc = item.description.slice(0,248) + ' ...' %>
+                    <p class="card__book-desc"><%= short_desc %></p>
                 </div>
                 <div class="card__actions">
-                    <h2 class="card__book-price">$<%= item.price %></h2>
-                    <a class="card__btn card__btn--edit" href="/admin/edit-book/<%= item.id %>?edit=true">Edit Book</button>
-                    <button class="card__btn card__btn--delete">Delete Book</button>
+                    <a class="card__btn card__btn--edit" href="/admin/edit-book/<%= item.book_id %>?edit=true">Edit Book</a>
+                    <a class="card__btn card__btn--delete">Delete Book</a>
                 </div>
             </div>
             <% }) %>

@@ -2,7 +2,27 @@
     <body>
     <%- include('../shared/nav') %>
         <main>
-            <div>Welcome to your cart</div>
+            <div>
+            <% if(books.length > 0 ) {%>
+                <div class="cart__list">
+                    <% books.map(b => {
+                    <div class="cart__list--item">
+                        <div><%= b.title %></div>
+                        <div>$ <%= b.price %></div>
+                        <div>$ <%= b.qty %></div>
+                        <div>
+                            <form action="/cart-delete-item" method="POST">
+                                <input type="hidden" value="<%= book.book_id %>" />
+                                <button type="submit">Remove from cart</button>
+                            </form>
+                        </div>
+                    </div>
+                    }) %>
+                </div>
+            <% } else { %>
+                <h1>No Books in Cart</h1>
+            <% } %>
+            </div>
         </main>
     </body>
 </html>

@@ -4,23 +4,28 @@
     <%- include('../shared/nav') %>
     <main>
         <div class="add-book">
-            <h2 class="form-control__title">Add a Book</h2>
-            <form action="/admin/add-product" class="form-control flex-column flex-column--left" method='POST'>
+            <h2 class="form-control__title"><% if (editing) { %> Update Book <% } else { %> Add a Book <% } %></h2>
+            <form action="/admin/<%= editing ? edit-book : add-book %>" class="form-control flex-column flex-column--left" method='POST'>
                 <label class="text" for="title">Title</label>
-                <input type="text" name="title" id="title" />
-                <label class="text" for="author">Author</label>
-                <input type="text" name="author" id="author" />
+                <input type="text" name="title" id="title" value="<% if (editing){ %> <%= book.title %> <% } %>" />
+                <label class="text" for="author">Author First Name</label>
+                <input type="text" name="author" id="author" value="<% if (editing){ %> <%= book.author_fname %> <% } %>"  />
+                <label class="text" for="author">Author Last Name</label>
+                <input type="text" name="author" id="author" value="<% if (editing){ %> <%= book.author_lname %> <% } %>" />
                 <label class="text" for="genre">Genre</label>
-                <input type="text" name="genre" id="genre" />
+                <input type="text" name="genre" id="genre" value="<% if (editing){ %> <%= book.genre %> <% } %>"  />
                 <label class="text" for="image">Image Url</label>
-                <input type="text" name="image" id="image" />
+                <input type="text" name="image" id="image"  value="<% if (editing){ %> <%= book.imageURL %> <% } %>" />
                 <label class="text" for="desc">Description</label>
-                <textarea name="desc" id="desc"></textarea>
+                <textarea name="desc" id="desc"><% if (editing){ %> <%= book.desc %> <% } %></textarea>
                 <div style="position:relative; width: 95%">
                     <label class="text" for="price">Price</label>
                     <div class="form-control__currency">$</div>
-                    <input type="number" name="price" id="price" step="0.01" />
+                    <input type="number" name="price" id="price" step="0.01" value="<% if (editing){ %> <%= book.price %> <% } %>" />
                 </div>
+                <% if (editing) { %>
+                    <input type="hidden" value="<%= book.id %>" name="bookId" />
+                <% } %>
                 <button class="form-control__submit-btn" type="submit">Submit</button>
             </form>
         </div>

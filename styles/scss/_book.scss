@@ -10,16 +10,18 @@
     &__items-grid {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         margin: 20px;
     }
 
     &__grid {
         display: grid;
-        grid-template-columns: 300px;
-        grid-template-rows: 80px 250px 200px 65px;
+        grid-template-columns: 350px;
+        grid-template-rows: 450px 130px 235px 70px;
         box-shadow: $box-shadow;
+        margin: 30px;
     }
 }
 
@@ -28,7 +30,8 @@
     &__header{
         display: flex;
         flex-direction: column;
-        padding: 15px;
+        padding: 15px 0px;
+        padding-left: 18px;
     }
 
     &__content {
@@ -38,32 +41,43 @@
     &__actions {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: space-evenly;
+        align-items: flex-start;
     }
 
     &__btn {
         border: none;
         padding: 10px 15px;
-        background: darkblue;
+        background-color: #000072;
+        font-family: $font-primary;
         color: #fff;
         font-size: 1rem;
+        width: 85px;
+        text-align: center;
         border-radius: 2px;
-        margin-right: 20px;
-
-        &--edit {
-            background-color: orangered;
-        }
+        cursor: pointer;
 
         &--delete {
-            background-color: darkred;
+            background-color: #b70000;
+            width: 100px;
+
+            &:hover {
+                background-color:lighten(#b70000, 2%) !important;
+            }
+        }
+
+        &:hover {
+            background-color: lighten(#000072, 5%);
+            box-shadow: 0 8px 6px -6px black;
         }
     }
 
     &__book {
 
         &-title {
+            font-family: $font-primary; 
             margin-bottom: 5px;
+            padding-right: 10px;
         }
 
         &-author {
@@ -73,21 +87,31 @@
         &-genre {
             font-family: $font-primary; 
             color: #ccc;
+            text-align: right;
+            padding: 10px 0px;
+            padding-right: 23px;
+            border-bottom: 1px solid #ccc;
         }
 
         &-img {
-            background-size: cover;
+            background-size: contain;
             background-repeat: no-repeat;
+            background-position: center;
             margin: 10px 2px;
         }
 
         &-price {
-            padding-left: 23px;
+            padding-right: 23px;
+            padding-top: 10px;
             text-align: right;
         }
 
         &-desc {
-            padding: 15px;
+            padding: 12px;
+            line-height: 1.5;
+            font-size: 15px;
+            max-height: 160px;
+            overflow: hidden;
         }
     }
 }

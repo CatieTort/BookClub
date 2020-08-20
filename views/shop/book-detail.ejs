@@ -2,13 +2,14 @@
     <body>
         <%- include('../shared/nav') %>
         <main>
-            <div>Welcome to book detail for <%= book.id %></div>
+            <div>Welcome to book detail for book <%= book.book_id %></div>
             <div>
                 <h1><%= book.title %></h1>
                 <hr>
-                <div style="background-image: url('<%= book.imageURL %>')"></div>
+                <% let lname_update = item.author_lname.replace(' ', '_'); %>
+                <div style="background-image: url('/assets/<%= `${lname_update}_${item.released_year}.jpg` %>')"></div>
                 <div><%= book.price %></div>
-                <div><%= book.desc %></div>
+                <div><%= book.description %></div>
                 <%- include('../shared/add-to-cart', item) %>
             </div>
         </main>

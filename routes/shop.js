@@ -16,6 +16,8 @@ router.post('/cart/:bookId', shopController.addToCart)
 
 router.get('/cart', shopController.showCart)
 
+router.post('/cart-delete-item', shopController.deleteCartItem)
+
 router.get('/checkout', shopController.goToCheckout )
 
 router.get('/orders', shopController.showOrders)
